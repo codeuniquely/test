@@ -46,6 +46,11 @@
 //
 // ================================================================
 
+
+const removeEmptyValues = (arr, removeEmpty) => {
+  return removeEmpty ? arr.filter(x => x.length > 0) : arr;
+}
+
 export const groupArrayElements = (array = [], n = 1, removeEmpty = false) => {
   // check we have been given an Array
   if (!Array.isArray(array) || !array) {
@@ -72,7 +77,7 @@ export const groupArrayElements = (array = [], n = 1, removeEmpty = false) => {
   // return result;
   // ===========================================
   if (number === 1) {
-    return [array];
+    return removeEmpty ? array : [array];
   }
 
   const length = array.length;
@@ -91,7 +96,7 @@ export const groupArrayElements = (array = [], n = 1, removeEmpty = false) => {
     //
     // EXPLAIN THIS !!!
     //
-    return result.map(_ => items.splice(0, itemsInSplit));
+    return removeEmptyValues(result.map(_ => items.splice(0, itemsInSplit)), removeEmpty);
   }
 
   // get elements to make the "remainder" parts of result.
@@ -134,10 +139,7 @@ export const groupArrayElements = (array = [], n = 1, removeEmpty = false) => {
   // this may be useful in returning a simpler
   // set of data when content dont convey much.
   // ===========================================
-  if (removeEmpty) {
-    //
-  }
 
   // return the result
-  return result;
+  return removeEmptyValues(result, removeEmpty);
 };

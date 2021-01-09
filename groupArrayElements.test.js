@@ -119,3 +119,9 @@ test('contradiction #2', () => {
   // test [1, 2, 3, 5]
   expect(groupArrayElements([1,2,3,4,5], 3)).toEqual([[1,2], [3], [4,5]]);
 });
+
+test('removing the blanks', () => {
+  expect(groupArrayElements([], 3, true)).toEqual([]);
+  expect(groupArrayElements([1], 3, true)).toEqual([[1]]);
+  expect(groupArrayElements([1,2], 3, true)).toEqual([[1,2]]);
+});
