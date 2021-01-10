@@ -60,13 +60,11 @@ The library is test independantly of the main code to validate its functions.
 I did not MOCK out the use of `removeEmptyValues` duing testsing as i went for a more Integration style test and in realiy the mock would have been close in functionalit to the original one line of code.
 
 ## Code Coverage Results
------------------------|---------|----------|---------|---------|-------------------
 File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
------------------------|---------|----------|---------|---------|-------------------
 All files              |     100 |      100 |     100 |     100 |
  groupArrayElements.js |     100 |      100 |     100 |     100 |
  utils.js              |     100 |      100 |     100 |     100 |
------------------------|---------|----------|---------|---------|-------------------
+
 Test Suites: 2 passed, 2 total
 Tests:       20 passed, 20 total
 Snapshots:   0 total
