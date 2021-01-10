@@ -14,22 +14,22 @@ groupArrayElements([ 1 , 2 , 3 , 4 , 5 ], 3 );
  ```
 
  ## To install the project & code
-To intsall the function project and prep the test environment.
+To simply install the function / project and prep the modules of the test environment.
 
 `npm install`
 
 The test environemnt uses Jest test runner in order to text the function and (utils) and also to provide test code coverage reporting.
-The code is written as modules and used ES6 and uses babel JS to support this.
+The code is written as modules and used ES6 and so includes babel JS to support this.
  - information on jest found at https://jestjs.io/docs/en/cli
 
 
  ## run all tests
- To run the tests simply type the following at the command line. (use Jest)
+ To run the tests simply type the following at the command line. (it uses Jest)
 
 `npm test`
 
-Here I use a small util function library during testing and to add some additional functinality not asked for in the original spec. Since the additional functional is totally optional it felt right to remove these functions to a separate helper library.
-The library is test independantly of the main code to validate its functions.
+Here I use a small util function library during testing and to add some additional functionality not asked for in the original spec. Since the additional functionality is totally optional it felt right to remove these functions to a separate helper library.
+The library is tested independently of the main code to validate its functions.
 
  ## Expected Test results
 ```
@@ -57,11 +57,11 @@ The library is test independantly of the main code to validate its functions.
     ✓ removeEmptyValues is defined
     ✓ works for an empty array without flag
     ✓ works for an empty array (5 ms)
-    ✓ does NOT removes all empty arrays without flag
+    ✓ does NOT remove all empty arrays without flag
     ✓ removes all empty arrays inside an array
 ```
 
-I did not MOCK out the use of `removeEmptyValues` duing testsing as i went for a more Integration style test and in realiy the mock would have been close in functionalit to the original one line of code.
+I did not MOCK out the use of `removeEmptyValues` during testsing as I went for a more Integration style test and in reality the mock would have been close in functionality to the original one line of code anyway.
 
 ## Code Coverage Results
 -----------------------|---------|----------|---------|---------|-------------------
