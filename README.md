@@ -28,7 +28,7 @@ Here I use a small util function library during testing and to add some addition
 The library is test independantly of the main code to validate its functions.
 
  ## Expected Test results
-
+```
  PASS  ./groupArrayElements.test.js
   groupArrayElements
     ✓ is defined (2 ms)
@@ -55,7 +55,7 @@ The library is test independantly of the main code to validate its functions.
     ✓ works for an empty array (5 ms)
     ✓ does NOT removes all empty arrays without flag
     ✓ removes all empty arrays inside an array
-
+```
 
 I did not MOCK out the use of `removeEmptyValues` duing testsing as i went for a more Integration style test and in realiy the mock would have been close in functionalit to the original one line of code.
 
@@ -68,8 +68,9 @@ All files              |     100 |      100 |     100 |     100 |
  utils.js              |     100 |      100 |     100 |     100 |
 -----------------------|---------|----------|---------|---------|-------------------
 
-
+```
 Test Suites: 2 passed, 2 total
 Tests:       20 passed, 20 total
 Snapshots:   0 total
 Time:        1.615 s
+```
