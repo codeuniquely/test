@@ -1,9 +1,4 @@
-// import helper functions- will be tested separately
 import { removeEmptyValues } from './utils.js'
-
-// const removeEmptyValues = (arr, removeEmpty) => {
-//   return removeEmpty ? arr.filter(x => x.length > 0) : arr;
-// }
 
 // ================================================================
 // Given an array of length >= 0, and a positive integer N
@@ -24,9 +19,7 @@ export const groupArrayElements = (array = [], n = 1, removeEmpty = false) => {
     throw Error('Number of divisions must be whole number greater than 0');
   }
 
-  // ===========================================
   // short-curcuit when we only want 1 division,
-  // ===========================================
   if (number === 1) {
     return removeEmptyValues([array], removeEmpty);
   }
