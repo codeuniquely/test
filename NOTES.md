@@ -5,7 +5,7 @@
 The requirements given for the function are actually contradictory an dned more explanation
 when the length of the array does not divide by 'N' equally.
 
-### work an example
+### Working an example
 Take the case where there are 5 items in the data array and the value of 'N' is given as 3 (three)
 
 It is clear to see that in dividing 5 by 3 we end up with 1 lot of 'N' (3) and we are left with a remainder of 2 items...
@@ -13,19 +13,19 @@ It is clear to see that in dividing 5 by 3 we end up with 1 lot of 'N' (3) and w
  In fact the test specification gives this exact example:
     => groupArrayElements([ 1, 2, 3, 4, 5 ], 3 );
 
- and a given answer is shown as: [ [1,2], [3,4], [5] ]
+ but the example answer is given (shown as): [ [1,2], [3,4], [5] ]
 
- ## Warning
+ ## Warning - This is wrong !!!
 
- Thist answer is possibly what is intended but breaks the rules of the function.
+ Whilst this answer is possibly what the author intended it ACTUALLY breaks the rules defined for the function.
  According the rules listed above, which state that the last section *MUST BE* (remainder) items in length.
 
- In order for this to happen the results must be formatted as [ [x], [y], [4,5] ]
+ In order for this to happen the results would need be formatted as [ [x], [y], [4,5] ]
 
  This means there are two possible outcomes based on what you chose for the arrays (x) and (y);
-   [ [1], [2,3], [4,5] ]  and  [ [1,2], [3], [4,5] ]
+   [ [1], [2,3], [4,5] ]  and  [ [1,2], [3], [4,5] ]. I choose to code the latter of these.
 
- Neither of these answers have EQUAL array sizes for (a) and (b) and we cannot return the contents of the array divided into equally sized arrays.
+ Neither of these answers would result in EQUAL array sizes for (a) and (b) and in fact when not divisable by 'N' and ensuring remiander length last items we cannot return the contents of the array divided into equally sized arrays.
 
 ## Other things
 
