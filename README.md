@@ -61,7 +61,7 @@ The library is tested independently of the main code to validate its functions.
     ✓ removes all empty arrays inside an array
 ```
 
-I did not MOCK out the use of `removeEmptyValues` during testsing as I went for a more Integration style test and in reality the mock would have been close in functionality to the original one line of code anyway.
+I did not MOCK out the use of `removeEmptyValues` during testing as I went for a more Integration style test and in reality the mock would have been close in functionality to the original one line of code anyway.
 
 ## Code Coverage Results
 -----------------------|---------|----------|---------|---------|-------------------
