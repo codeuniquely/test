@@ -15,11 +15,13 @@ groupArrayElements([ 1 , 2 , 3 , 4 , 5 ], 3 );
 
  ## To install the project & code
 To intsall the function project and prep the test environment.
+
+`npm install`
+
 The test environemnt uses Jest test runner in order to text the function and (utils) and also to provide test code coverage reporting.
 The code is written as modules and used ES6 and uses babel JS to support this.
  - information on jest found at https://jestjs.io/docs/en/cli
 
-`npm install`
 
  ## run all tests
  To run the tests simply type the following at the command line. (use Jest)
