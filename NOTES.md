@@ -30,13 +30,13 @@ It is clear to see that in dividing 5 by 3 we end up with 1 lot of 'N' (3) and w
 ## Other things
 
 ### Cloning arrays using slice(0) - so as not to mutate inputs
-If you are unsure what this function does not mutate its inputs (functional programming)
+If you are unsure what this function does or about not mutating inputs (functional programming)
 https://davidwalsh.name/javascript-clone-array for more detail.
 
 ### using negative slice values
-I use a negative number (in some laces) in a slice to return items from the end of an array
+I use a negative number (in some places) in slice to return items from the end of an array
 (not the start). Please see https://www.w3schools.com/jsref/jsref_slice_array.asp for more information
 
 ### splice things out of an array
-Splice mutates the array passd in by extracting a section of `size` in length from the start of the array and leaves the orginal array `size` items smaller
+Splice mutates the array passed in by extracting a section of `size` in length from the start of the array and leaves the orginal array `size` items smaller
 see https://www.w3schools.com/jsref/jsref_splice.asp for more information
