@@ -1,22 +1,48 @@
-import { getLastPartOfArray } from './utils.js'
+import { getLastPartOfArray, removeEmptyValues } from './utils.js'
 
 // =======================================================
-// As we will be using this helper function during testing
-// in the main test library, we should take some time to
-// make sure thet the function does what we expect it to.
+// We will be using these helper functions during testing
+// and in the function library. We should take the time to
+// make sure thet the functions do what we expect them to.
 // =======================================================
 
-// make sure the function is defined
-test('getLastPartOfArray is defined', () => {
-  expect(getLastPartOfArray).toBeDefined();
+describe('getLastPartOfArray', () => {
+  test('is defined', () => {
+    expect(getLastPartOfArray).toBeDefined();
+  });
+
+  test('returns undefined if thre are no elements in the array', () => {
+    expect(getLastPartOfArray([])).toEqual(undefined);
+  });
+
+  test('returns the last element of an array', () => {
+    expect(getLastPartOfArray([1,2,3,4,5,6])).toEqual(6);
+    expect(getLastPartOfArray([[1],[2],[3],[4],[5],[6]])).toEqual([6]);
+  });
 });
 
-// make sure it retruned the
-test('getLastPartOfArray returns undefined if thre are no elements', () => {
-  expect(getLastPartOfArray([])).toEqual(undefined);
-});
+describe('removeEmptyValues', () => {
+  const array = [[], [1], [], [], [2,3], []];
 
-test('getLastPartOfArray return the last element of an array', () => {
-  expect(getLastPartOfArray([1,2,3,4,5,6])).toEqual(6);
-  expect(getLastPartOfArray([[1],[2],[3],[4],[5],[6]])).toEqual([6]);
+  test('removeEmptyValues is defined', () => {
+    expect(removeEmptyValues).toBeDefined();
+  });
+
+  test('getLastPartOfArray works for an empty array', () => {
+    expect(removeEmptyValues([])).toEqual([]);
+  });
+
+  test('works for an empty array', () => {
+    expect(removeEmptyValues([[]], true)).toEqual([]);
+  });
+
+  test('does NOT removes all empty arrays without flag', () => {
+    // const array = [[], [1], [], [], [2,3], []];
+    expect(removeEmptyValues(array)).toEqual(array);
+  });
+
+  test('removes all empty arrays inside an array', () => {
+    // const array = [[], [1], [], [], [2,3], []];
+    expect(removeEmptyValues(array, true)).toEqual([[1],[2,3]]);
+  });
 });
