@@ -14,15 +14,17 @@ groupArrayElements([ 1 , 2 , 3 , 4 , 5 ], 3 );
  ```
 
  ## To install the project & code
-To intsall the function project and prep the test environment
+To intsall the function project and prep the test environment.
+The test environemnt uses Jest test runner in order to text the function and (utils) and also to provide test code coverage reporting.
+The code is written as modules and used ES6 and uses babel JS to support this.
+ - information on jest found at https://jestjs.io/docs/en/cli
 
 `npm install`
 
  ## run all tests
- To run the tests simply type the following at the command line.
+ To run the tests simply type the following at the command line. (use Jest)
 
 `npm test`
-
 
 Here I use a small util function library during testing and to add some additional functinality not asked for in the original spec. Since the additional functional is totally optional it felt right to remove these functions to a separate helper library.
 The library is test independantly of the main code to validate its functions.
