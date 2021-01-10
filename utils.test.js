@@ -28,7 +28,7 @@ describe('removeEmptyValues', () => {
     expect(removeEmptyValues).toBeDefined();
   });
 
-  test('getLastPartOfArray works for an empty array', () => {
+  test('works for an empty array without flag', () => {
     expect(removeEmptyValues([])).toEqual([]);
   });
 

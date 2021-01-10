@@ -55,7 +55,7 @@ The library is test independantly of the main code to validate its functions.
     ✓ returns the last element of an array (1 ms)
   removeEmptyValues
     ✓ removeEmptyValues is defined
-    ✓ getLastPartOfArray works for an empty array
+    ✓ works for an empty array without flag
     ✓ works for an empty array (5 ms)
     ✓ does NOT removes all empty arrays without flag
     ✓ removes all empty arrays inside an array
